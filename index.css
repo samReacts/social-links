@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 20%);
+  --Dark-Grey: hsl(0, 0%, 12%);
+  --Off-Black: hsl(0, 0%, 8%);
+  --Green: hsl(75, 94%, 57%);
+}
+
+body {
+  background: var(--Off-Black);
+  color: var(--White);
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--White);
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+.card {
+  min-width: 20%;
+  background-color: var(--Dark-Grey);
+  border-radius: 1rem;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+@media screen and (width < 600px) {
+    .card{
+        width: 90%;
+    }
+    .wrapper{
+        padding: 2rem;
+        height: calc(100% - 2rem);
+    }
+}
+
+.name-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.name-container h2, p{
+    margin: 0;
+}
+.name-container p{
+    font-weight: 600;
+}
+
+.name-container+p{
+    margin-bottom: 1rem;
+}
+
+.img-div {
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.img-div > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.green {
+  color: var(--Green);
+}
+
+a.link-btn{
+    background-color: var(--Grey);
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+a.link-btn:hover{
+    background-color: var(--Green);
+    color: black;
+}
